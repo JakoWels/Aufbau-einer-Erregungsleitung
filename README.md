@@ -8,5 +8,4 @@ Damit die Animation einwandfrei funktionieren kann, ist es logischerweise nötig
 werden. Dafür ist ein wenig Geduld und Fingerspitzengefühl nötig. Viel Erfolg dabei... :)
 
 ---
-Code by Jako |
-Modell by Linus, Hannah, Pia & Jako
+Code by Jako              |             Modell by Linus, Hannah, Pia & Jako
