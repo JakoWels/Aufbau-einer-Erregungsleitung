@@ -1,0 +1,239 @@
+//Bestimmung der Konstanten für die blauen LEDs. Pin 4-10 & 22-52.
+
+const int BLED_1 = 22;
+const int BLED_2 = 24;
+const int BLED_3 = 26;
+const int BLED_4 = 28;
+const int BLED_5 = 30;
+const int BLED_6 = 32;
+const int BLED_7 = 34;
+const int BLED_8 = 36;
+const int BLED_9 = 38;
+const int BLED_10 = 40;
+const int BLED_11 = 42;
+const int BLED_12 = 44;
+const int BLED_13 = 46;
+const int BLED_14 = 48;
+const int BLED_15 = 50;
+const int BLED_16 = 52;
+const int BLED_17 = 4;
+const int BLED_18 = 6;
+const int BLED_19 = 8;
+const int BLED_20 = 10;
+
+//Bestimmung der Konstanten für die roten LEDs. Pin 3-9 & 23-53.
+
+const int RLED_1 = 23;
+const int RLED_2 = 25;
+const int RLED_3 = 27;
+const int RLED_4 = 29;
+const int RLED_5 = 31;
+const int RLED_6 = 33;
+const int RLED_7 = 35;
+const int RLED_8 = 37;
+const int RLED_9 = 39;
+const int RLED_10 = 41;
+const int RLED_11 = 43;
+const int RLED_12 = 45;
+const int RLED_13 = 47;
+const int RLED_14 = 49;
+const int RLED_15 = 51;
+const int RLED_16 = 53;
+const int RLED_17 = 3;
+const int RLED_18 = 5;
+const int RLED_19 = 7;
+const int RLED_20 = 9;
+
+void setup() {
+
+  // Hier werden Pins als aus Output definiert.
+pinMode(BLED_1, OUTPUT);
+pinMode(BLED_2, OUTPUT);
+pinMode(BLED_3, OUTPUT);
+pinMode(BLED_4, OUTPUT);
+pinMode(BLED_5, OUTPUT);
+pinMode(BLED_6, OUTPUT);
+pinMode(BLED_7, OUTPUT);
+pinMode(BLED_8, OUTPUT);
+pinMode(BLED_9, OUTPUT);
+pinMode(BLED_10, OUTPUT);
+pinMode(BLED_11, OUTPUT);
+pinMode(BLED_12, OUTPUT);
+pinMode(BLED_13, OUTPUT);
+pinMode(BLED_14, OUTPUT);
+pinMode(BLED_15, OUTPUT);
+pinMode(BLED_16, OUTPUT);
+pinMode(BLED_17, OUTPUT);
+pinMode(BLED_18, OUTPUT);
+pinMode(BLED_19, OUTPUT);
+pinMode(BLED_20, OUTPUT);
+
+pinMode(RLED_1, OUTPUT);
+pinMode(RLED_2, OUTPUT);
+pinMode(RLED_3, OUTPUT);
+pinMode(RLED_4, OUTPUT);
+pinMode(RLED_5, OUTPUT);
+pinMode(RLED_6, OUTPUT);
+pinMode(RLED_7, OUTPUT);
+pinMode(RLED_8, OUTPUT);
+pinMode(RLED_9, OUTPUT);
+pinMode(RLED_10, OUTPUT);
+pinMode(RLED_11, OUTPUT);
+pinMode(RLED_12, OUTPUT);
+pinMode(RLED_13, OUTPUT);
+pinMode(RLED_14, OUTPUT);
+pinMode(RLED_15, OUTPUT);
+pinMode(RLED_16, OUTPUT);
+pinMode(RLED_17, OUTPUT);
+pinMode(RLED_18, OUTPUT);
+pinMode(RLED_19, OUTPUT);
+pinMode(RLED_20, OUTPUT);
+}
+
+
+void loop() {
+  
+digitalWrite(RLED_1,HIGH);
+digitalWrite(BLED_2,HIGH);
+digitalWrite(RLED_3,HIGH);    //Phase 1: rot und weiß erscheinen
+digitalWrite(BLED_4,HIGH);
+
+delay(1000);
+
+digitalWrite(RLED_1,LOW);
+digitalWrite(BLED_2,LOW);
+digitalWrite(RLED_3,LOW);     //Phase 2: rot und weiß tauschen die Seiten
+digitalWrite(BLED_4,LOW);
+
+digitalWrite(BLED_1,HIGH);
+digitalWrite(RLED_2,HIGH);
+digitalWrite(BLED_3,HIGH);    // -"-
+digitalWrite(RLED_4,HIGH);
+
+delay(1000);
+
+digitalWrite(BLED_1,LOW);
+digitalWrite(RLED_2,LOW);
+digitalWrite(BLED_3,LOW);    // Phase 3: Erster Block wird ausgeschaltet 
+digitalWrite(RLED_4,LOW);
+
+delay(1500);
+
+digitalWrite(BLED_5,HIGH);
+
+digitalWrite(RLED_8,HIGH);
+delay(300);
+digitalWrite(BLED_6,HIGH);
+digitalWrite(BLED_5,LOW);
+
+digitalWrite(RLED_7,HIGH);
+digitalWrite(RLED_8,LOW);
+delay(300);   
+digitalWrite(BLED_7,HIGH);    //Phase 3: Ionen bewegen sich
+digitalWrite(BLED_6,LOW);
+
+digitalWrite(RLED_6,HIGH);    
+digitalWrite(RLED_7,LOW);
+delay(300); 
+digitalWrite(BLED_8,HIGH);
+digitalWrite(BLED_7,LOW);
+
+digitalWrite(RLED_5,HIGH);
+digitalWrite(RLED_6,LOW);
+delay(300);
+digitalWrite(BLED_8,LOW);
+
+digitalWrite(RLED_5,LOW);
+
+delay(1000);
+
+digitalWrite(BLED_1,LOW);
+digitalWrite(BLED_3,LOW);    //
+
+delay(2000);
+
+                          //PHASE 2 FÄNGT AN ------------------------------------------------------|
+
+digitalWrite(RLED_9,HIGH);
+digitalWrite(BLED_10,HIGH);
+digitalWrite(RLED_11,HIGH);    //Phase 1: rot und weiß erscheinen
+digitalWrite(BLED_12,HIGH);
+
+delay(1000);
+
+digitalWrite(RLED_9,LOW);
+digitalWrite(BLED_10,LOW);
+digitalWrite(RLED_11,LOW);     //Phase 2: rot und weiß tauschen die Seiten
+digitalWrite(BLED_12,LOW);
+
+digitalWrite(BLED_9,HIGH);
+digitalWrite(RLED_10,HIGH);
+digitalWrite(BLED_11,HIGH);    // -"-
+digitalWrite(RLED_12,HIGH);
+
+delay(1000);
+
+digitalWrite(BLED_9,LOW);
+digitalWrite(RLED_10,LOW);
+digitalWrite(BLED_11,LOW);    // Phase 3: Erster Block wird ausgeschaltet 
+digitalWrite(RLED_12,LOW);
+
+delay(1000);
+
+digitalWrite(BLED_13,HIGH);
+
+digitalWrite(RLED_16,HIGH);
+delay(300);
+digitalWrite(BLED_14,HIGH);
+digitalWrite(BLED_13,LOW);
+
+digitalWrite(RLED_15,HIGH);
+digitalWrite(RLED_16,LOW);
+delay(300);   
+digitalWrite(BLED_15,HIGH);    //Phase 3: Ionen bewegen sich
+digitalWrite(BLED_14,LOW);
+
+digitalWrite(RLED_14,HIGH);    
+digitalWrite(RLED_15,LOW);
+delay(300); 
+digitalWrite(BLED_16,HIGH);
+digitalWrite(BLED_15,LOW);
+
+digitalWrite(RLED_13,HIGH);
+digitalWrite(RLED_14,LOW);
+delay(300);
+digitalWrite(BLED_16,LOW);
+
+digitalWrite(RLED_13,LOW);
+
+delay(1000);
+
+digitalWrite(BLED_9,LOW);
+digitalWrite(BLED_11,LOW);    //
+
+delay(1000);
+
+digitalWrite(RLED_17,HIGH);
+digitalWrite(BLED_18,HIGH);
+digitalWrite(RLED_19,HIGH);    //Phase 1: rot und weiß erscheinen
+digitalWrite(BLED_20,HIGH);
+
+delay(1000);
+
+digitalWrite(RLED_17,LOW);
+digitalWrite(BLED_18,LOW);
+digitalWrite(RLED_19,LOW);     //Phase 2: rot und weiß tauschen die Seiten
+digitalWrite(BLED_20,LOW);
+
+digitalWrite(BLED_17,HIGH);
+digitalWrite(RLED_18,HIGH);
+digitalWrite(BLED_19,HIGH);    // -"-
+digitalWrite(RLED_20,HIGH);
+
+delay(1000);
+
+digitalWrite(BLED_17,LOW);
+digitalWrite(RLED_18,LOW);
+digitalWrite(BLED_19,LOW);    // Phase 3: Erster Block wird ausgeschaltet 
+digitalWrite(RLED_20,LOW);
+}
